@@ -6,7 +6,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-char *Reverse(char *string);
+/*char *Reverse(char *string);
 static char *reverse(char *string, int len);
 int main(int argc, char *argv[])
 {
@@ -35,7 +35,7 @@ static char *reverse(char *string, int len)
 		string[len - 1] = temp;
 		return (reverse(string + 1, len - 2) - 1);
 	}
-}
+}*/
 
 /* 自己的想法，即递归到字符串某位，然后反序输出 */
 /*void Reverse(char *string);
@@ -59,3 +59,24 @@ static void reverse(char *string, int string_len, int len)
 		reverse(string, string_len, len + 1);
 	printf("%c", string[len]);
 }*/
+
+void Reverse(char *string);
+
+int main(int argc, char *argv[])
+{
+	Reverse("program");
+	putchar('\n');
+	Reverse("moon");
+	putchar('\n');
+	Reverse("aaaabbbbccccddddeeeeffffgggg");
+	putchar('\n');
+
+	return 0;
+}
+void Reverse(char *string)
+{
+	if (*string == '\0')
+		return;
+	Reverse(string+1);
+	printf("%c", string[0]);
+}
