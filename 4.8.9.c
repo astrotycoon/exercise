@@ -70,6 +70,8 @@ int main(int argc, char *argv[])
 	putchar('\n');
 	Reverse("aaaabbbbccccddddeeeeffffgggg");
 	putchar('\n');
+	Reverse("I am a student!");
+	putchar('\n');
 
 	return 0;
 }
